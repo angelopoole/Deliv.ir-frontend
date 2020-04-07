@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+
+import React, { useEffect } from 'react';
+import Routes from './Pages';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { connect, useSelector, useDispatch } from 'react-redux';
+import Nav from './Components/Nav';
 import './App.css';
 
 function App() {
+
+  //here we create the call to get all users/posts and set them to a redux state/store.
+
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Nav />
+      <Routes />
+    </Router>
   );
 }
 
