@@ -2,6 +2,8 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import Profile from './Profile';
+import '../Styles/master.scss';
+
 
 
 export default function Routes() {
