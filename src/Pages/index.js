@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import Profile from './Profile';
 import '../Styles/master.scss';
+import Auth from './Auth'
 
 
 
@@ -13,7 +14,7 @@ export default function Routes() {
             <Route exact path="/profile" component={Profile} />
             {/* <Route exact path="/dogs" component={Dogs} /> */}
             {/* <Route exact path="/dogs/:id" component={DogShow} /> */}
-            {/* <Route exact path="/auth" component={Auth} /> */}
+            <Route exact path="/auth" component={Auth} />
         </Switch>
     );
 }
