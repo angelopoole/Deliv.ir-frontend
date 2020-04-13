@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Swal from 'sweetalert2'
+
 
 const Auth = () => {
     const user = useSelector(state => state.user);
@@ -31,6 +33,12 @@ const Auth = () => {
                     type: 'SET_USER',
                     payload: data.user
                 });
+                Swal.fire({
+                    title: 'You have been logged in!',
+                    text: 'enjoy the app!',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                })
             });
     }
 

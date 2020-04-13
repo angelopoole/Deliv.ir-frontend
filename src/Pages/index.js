@@ -7,11 +7,12 @@ import Auth from './Auth'
 
 
 
-export default function Routes() {
+export default function Routes(props) {
+    console.log("inside router", props)
     return (
         <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/profile" component={Profile} />
+            <Route exact path="/profile" render={(props) => <Profile {...props} />} />
             {/* <Route exact path="/dogs" component={Dogs} /> */}
             {/* <Route exact path="/dogs/:id" component={DogShow} /> */}
             <Route exact path="/auth" component={Auth} />
